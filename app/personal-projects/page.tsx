@@ -5,7 +5,8 @@ const projects: ProjectCardProps[] = [
     name: 'Blog',
     aboutProject:
       'The Blog application is a full-stack project with a rich set of features, allowing users to read, create, comment on, and manage blog posts in an engaging environment.',
-    technologies: 'React, Redux & Toolkit, Node.js, Express, ',
+    technologies:
+      'React, Redux & Toolkit, Node.js, Express, Formik, Yup, React-Redux, Redux-Persist, Cloudinary, bcrypt',
     features:
       'Like functionality on posts with a list of popular posts; Authentication with session management; Home page with post feed, popular posts, and post creation; Full-screen post view with commenting and comment management; Profile page displaying user info and posts with options to edit or delete posts;',
     type: 'FullStack',

@@ -6,6 +6,7 @@ import {
   FaGitAlt,
   FaTelegram,
   FaLinkedin,
+  FaGithub,
 } from 'react-icons/fa'
 import {
   SiRedux,
@@ -13,6 +14,7 @@ import {
   SiMongodb,
   SiExpress,
   SiNextdotjs,
+  SiMysql,
 } from 'react-icons/si'
 
 export default function AboutMe() {
@@ -67,12 +69,7 @@ export default function AboutMe() {
               rel="noopener noreferrer"
               className="hover:opacity-80"
             >
-              <Image
-                src="/images/djinni.png"
-                alt="Djinni"
-                width={36}
-                height={36}
-              />
+              <FaGithub size={36} />
             </a>
           </div>
         </div>
@@ -89,10 +86,6 @@ export default function AboutMe() {
           icon={<SiRedux className="text-purple-400" />}
           name="Redux & Toolkit"
         />
-        <Skill
-          icon={<FaReact className="text-blue-400" />}
-          name="React Native"
-        />
         <Skill icon={<SiNextdotjs className="text-white" />} name="Next.js" />
         <Skill icon={<FaGitAlt className="text-orange-400" />} name="Git" />
         <Skill icon={<FaNodeJs className="text-green-400" />} name="Node.js" />
@@ -102,6 +95,7 @@ export default function AboutMe() {
           icon={<SiTypescript className="text-blue-500" />}
           name="TypeScript"
         />
+        <Skill icon={<SiMysql className="text-blue-400" />} name="MySQL" />
       </div>
     </div>
   )

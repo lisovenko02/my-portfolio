@@ -20,7 +20,7 @@ const projects: ProjectCardProps[] = [
     features:
       'Dashboard with product list, sales and purchase summaries, expense diagrams, and order tracking; Inventory page with product details (ID, name, price, rating, stock); Products page with search, product creation, and detailed listings; Users page with user management (ID, name, email); Settings for profile customization; Expenses page with visual expense tracking over time.',
     technologies:
-      'Next.js, Tailwind, Redux Toolkit, Redux Toolkit Query, Material UI Data Grid, Node.js, Prisma, Postgres, AWS EC2, AWS RDS, AWS API Gateway, AWS Amplify, AWS S3.',
+      'Next.js, Tailwind, Redux Toolkit, Redux Toolkit Query, Material UI Data Grid, Node.js, Prisma, Postgres, AWS EC2, AWS RDS, AWS API Gateway, AWS Amplify, AWS S3',
     type: 'FullStack',
     urlGit: 'https://github.com/lisovenko02/inventory-management',
     urlSite: 'https://main.d2x3quyg4kkqmr.amplifyapp.com/',
