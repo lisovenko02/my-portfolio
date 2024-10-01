@@ -2,6 +2,18 @@ import ProjectCard, { ProjectCardProps } from '@/components/ProjectCard'
 
 const projects: ProjectCardProps[] = [
   {
+    name: 'Banking App',
+    aboutProject:
+      'Horizon is a modern banking platform for everyone. You can log in using the following credentials Email: asd@gmail.com; Password: 123456789',
+    features:
+      'Authentication; Connect Banks(Plaid); Shows general overview of user account with total balance from all connected banks, recent transactions; Show Bank Cards; Transaction History, Real-time Updates, Funds Transfer, Responsiveness',
+    technologies:
+      'Next.js, TypeScript, Appwrite, Plaid, Dwolla, React Hook Form, Zod, TailwindCSS, Chart.js, ShadCN',
+    type: 'FullStack',
+    urlGit: 'https://github.com/lisovenko02/banking_app',
+    urlSite: 'https://bankingapp-ivory.vercel.app/',
+  },
+  {
     name: 'Mazon',
     aboutProject:
       'Mazon is an e-commerce web application similar to Amazon, designed for a seamless online shopping experience. The main goal of the site is to facilitate the purchase of products, allowing users to easily add items to their cart and proceed through a structured checkout process.',
