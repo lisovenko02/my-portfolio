@@ -57,7 +57,7 @@ export default function RootLayout({
         </header>
         <main className="flex-grow p-4">{children}</main>
         <footer className="bg-gray-800 p-4 text-center">
-          <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+          <p>&copy; 2025 My Portfolio. All rights reserved.</p>
         </footer>
       </body>
     </html>

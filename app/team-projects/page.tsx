@@ -1,4 +1,7 @@
-import ProjectCard, { ProjectCardProps } from '@/components/ProjectCard'
+import ProjectCard, {
+  MainTechnologiesEnum,
+  ProjectCardProps,
+} from '@/components/ProjectCard'
 
 const projects: ProjectCardProps[] = [
   {
@@ -11,7 +14,14 @@ const projects: ProjectCardProps[] = [
       'I was responsible for implementing the edit profile functionality, covering both backend and frontend development.',
     technologies:
       'React Redux Toolkit Axios React Router Formik Yup React Datepicker React Hot Toast & Node.js Express.js MongoDB Mongoose jsonwebtoken bcryptjs',
+    mainTechnologies: [
+      MainTechnologiesEnum.React,
+      MainTechnologiesEnum.Node,
+      MainTechnologiesEnum.MongoDB,
+    ],
     type: 'FullStack',
+    urlImg:
+      'https://events2025.s3.eu-north-1.amazonaws.com/1/602b711a-1b62-49ce-ac4b-dd72e532b659',
     urlGit: 'https://github.com/AnnaNADVOR/taskPro_project-group-6',
     urlBack: 'https://github.com/artem-yaremchuk/task-pro-backend',
     urlSite: 'https://annanadvor.github.io/taskPro_project-group-6/',
@@ -25,7 +35,10 @@ const projects: ProjectCardProps[] = [
     myRole:
       'I was responsible for creating the modal feature, allowing users to view detailed information about each book in a convenient and accessible way.',
     technologies: 'HTML, CSS, and JavaScript ',
+    mainTechnologies: [MainTechnologiesEnum.JavaScript],
     type: 'FrontEnd',
+    urlImg:
+      'https://events2025.s3.eu-north-1.amazonaws.com/1/f3f8b960-3415-4b83-a2ed-e58b9caf6190',
     urlGit: 'https://github.com/Oleksander-Kozlov/project-Itside2.0',
     urlSite: 'https://oleksander-kozlov.github.io/project-Itside2.0/index.html',
   },
@@ -38,7 +51,10 @@ const projects: ProjectCardProps[] = [
     myRole:
       'I was responsible for creating several pages related to the menu and hotel, enhancing the overall user experience.',
     technologies: 'SCSS HTML JAVASCRIPT',
+    mainTechnologies: [MainTechnologiesEnum.JavaScript],
     type: 'FrontEnd',
+    urlImg:
+      'https://events2025.s3.eu-north-1.amazonaws.com/1/df4a4cab-834b-4935-a509-30ea37df32a0',
     urlGit: 'https://github.com/vbegunova/mimino-team',
     urlSite: 'https://vbegunova.github.io/mimino-team/',
   },

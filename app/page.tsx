@@ -7,6 +7,8 @@ import {
   FaTelegram,
   FaLinkedin,
   FaGithub,
+  FaAws,
+  FaVuejs,
 } from 'react-icons/fa'
 import {
   SiRedux,
@@ -15,15 +17,14 @@ import {
   SiExpress,
   SiNextdotjs,
   SiMysql,
+  SiNestjs,
+  SiPrisma,
+  SiSocketdotio,
 } from 'react-icons/si'
 
 export default function AboutMe() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4 text-center">
-        Welcome to My Portfolio
-      </h1>
-      <hr />
       <div className="flex flex-col md:flex-row gap-8 mb-8 mt-4">
         <div className="md:w-1/3">
           <Image
@@ -38,13 +39,14 @@ export default function AboutMe() {
           <h2 className="text-3xl font-bold mb-2">Ivan Lisovenko</h2>
           <h3 className="text-xl mb-4">Full Stack Developer</h3>
           <p className="mb-4">
-            <strong className="text-gray-100">Summary:</strong> I am a
-            passionate Full Stack Developer with experience in building
-            responsive web applications using modern JavaScript frameworks and
-            libraries. I enjoy solving complex problems and learning new
-            technologies. I always strive for the best. I am looking for a
-            company where I can grow and develop professionally, as this is very
-            important to me.
+            <strong className="text-gray-100">Summary:</strong> I am a highly
+            motivated Full Stack Developer with expertise in building scalable
+            and responsive web applications using modern JavaScript frameworks.
+            My skills include front-end development with React and Next.js,
+            backend development with Node.js and Nest.js, and database
+            management with MongoDB and MySQL. I am passionate about optimizing
+            performance, implementing best coding practices, and continuously
+            improving my skills.
           </p>
           <div className="flex space-x-6">
             <a
@@ -81,21 +83,29 @@ export default function AboutMe() {
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         <Skill icon={<FaJs className="text-yellow-400" />} name="JavaScript" />
-        <Skill icon={<FaReact className="text-blue-400" />} name="React" />
-        <Skill
-          icon={<SiRedux className="text-purple-400" />}
-          name="Redux & Toolkit"
-        />
-        <Skill icon={<SiNextdotjs className="text-white" />} name="Next.js" />
-        <Skill icon={<FaGitAlt className="text-orange-400" />} name="Git" />
-        <Skill icon={<FaNodeJs className="text-green-400" />} name="Node.js" />
-        <Skill icon={<SiExpress className="text-gray-400" />} name="Express" />
-        <Skill icon={<SiMongodb className="text-green-500" />} name="MongoDB" />
         <Skill
           icon={<SiTypescript className="text-blue-500" />}
           name="TypeScript"
         />
+        <Skill icon={<FaReact className="text-blue-400" />} name="React" />
+        <Skill icon={<SiNextdotjs className="text-white" />} name="Next.js" />
+        <Skill
+          icon={<SiRedux className="text-purple-400" />}
+          name="Redux & Toolkit"
+        />
+        <Skill icon={<FaNodeJs className="text-green-400" />} name="Node.js" />
+        <Skill icon={<SiNestjs className="text-red-500" />} name="NestJS" />
+        <Skill icon={<SiExpress className="text-gray-400" />} name="Express" />
+        <Skill icon={<SiPrisma className="text-blue-400" />} name="Prisma" />
+        <Skill
+          icon={<SiSocketdotio className="text-white" />}
+          name="Socket.io"
+        />
+        <Skill icon={<SiMongodb className="text-green-500" />} name="MongoDB" />
         <Skill icon={<SiMysql className="text-blue-400" />} name="MySQL" />
+        <Skill icon={<FaAws className="text-orange-400" />} name="AWS" />
+        <Skill icon={<FaGitAlt className="text-orange-400" />} name="Git" />
+        <Skill icon={<FaVuejs className="text-green-400" />} name="Vue.js" />
       </div>
     </div>
   )
