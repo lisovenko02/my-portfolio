@@ -1,121 +1,15 @@
-import Image from 'next/image'
-import {
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaTelegram,
-  FaLinkedin,
-  FaGithub,
-  FaAws,
-  FaVuejs,
-} from 'react-icons/fa'
-import {
-  SiRedux,
-  SiTypescript,
-  SiMongodb,
-  SiExpress,
-  SiNextdotjs,
-  SiMysql,
-  SiNestjs,
-  SiPrisma,
-  SiSocketdotio,
-} from 'react-icons/si'
+import Contact from '@/components/Contact'
+import FeaturedProjects from '@/components/FeaturedProjects'
+import Hero from '@/components/Hero'
+import Skills from '@/components/Skills'
 
-export default function AboutMe() {
+export default function HomePage() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-8 mb-8 mt-4">
-        <div className="md:w-1/3">
-          <Image
-            src="/images/myphoto.png"
-            alt="Profile Picture"
-            width={200}
-            height={200}
-            className="rounded-full"
-          />
-        </div>
-        <div className="md:w-2/3">
-          <h2 className="text-3xl font-bold mb-2">Ivan Lisovenko</h2>
-          <h3 className="text-xl mb-4">Full Stack Developer</h3>
-          <p className="mb-4">
-            <strong className="text-gray-100">Summary:</strong> I am a highly
-            motivated Full Stack Developer with expertise in building scalable
-            and responsive web applications using modern JavaScript frameworks.
-            My skills include front-end development with React and Next.js,
-            backend development with Node.js and Nest.js, and database
-            management with MongoDB and MySQL. I am passionate about optimizing
-            performance, implementing best coding practices, and continuously
-            improving my skills.
-          </p>
-          <div className="flex space-x-6">
-            <a
-              href="https://t.me/vanyalisovenko"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl text-blue-400 hover:text-blue-300"
-            >
-              <FaTelegram size={36} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ivan-lisovenko02/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl text-blue-600 hover:text-blue-500"
-            >
-              <FaLinkedin size={36} />
-            </a>
-            <a
-              href="https://djinni.co/q/yourusername/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80"
-            >
-              <FaGithub size={36} />
-            </a>
-          </div>
-        </div>
-      </div>
-      <hr />
-
-      <h3 className="text-2xl font-bold mb-4 text-gray-100 mt-4">
-        Tech Skills
-      </h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        <Skill icon={<FaJs className="text-yellow-400" />} name="JavaScript" />
-        <Skill
-          icon={<SiTypescript className="text-blue-500" />}
-          name="TypeScript"
-        />
-        <Skill icon={<FaReact className="text-blue-400" />} name="React" />
-        <Skill icon={<SiNextdotjs className="text-white" />} name="Next.js" />
-        <Skill
-          icon={<SiRedux className="text-purple-400" />}
-          name="Redux & Toolkit"
-        />
-        <Skill icon={<FaNodeJs className="text-green-400" />} name="Node.js" />
-        <Skill icon={<SiNestjs className="text-red-500" />} name="NestJS" />
-        <Skill icon={<SiExpress className="text-gray-400" />} name="Express" />
-        <Skill icon={<SiPrisma className="text-blue-400" />} name="Prisma" />
-        <Skill
-          icon={<SiSocketdotio className="text-white" />}
-          name="Socket.io"
-        />
-        <Skill icon={<SiMongodb className="text-green-500" />} name="MongoDB" />
-        <Skill icon={<SiMysql className="text-blue-400" />} name="MySQL" />
-        <Skill icon={<FaAws className="text-orange-400" />} name="AWS" />
-        <Skill icon={<FaGitAlt className="text-orange-400" />} name="Git" />
-        <Skill icon={<FaVuejs className="text-green-400" />} name="Vue.js" />
-      </div>
-    </div>
-  )
-}
-
-function Skill({ icon, name }: { icon: React.ReactNode; name: string }) {
-  return (
-    <div className="flex items-center gap-2 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors h-20">
-      <div className="text-2xl flex-shrink-0">{icon}</div>
-      <span className="text-gray-200 text-sm leading-tight">{name}</span>
-    </div>
+    <main className="max-w-6xl mx-auto px-6">
+      <Hero />
+      <FeaturedProjects />
+      <Skills />
+      <Contact />
+    </main>
   )
 }

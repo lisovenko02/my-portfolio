@@ -1,112 +1,93 @@
 import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa'
 import { MdWeb } from 'react-icons/md'
-import TechnologyIcons from './TechnologyIcons'
-
-type ProjectType = 'FullStack' | 'FrontEnd' | 'BackEnd'
-
-export enum MainTechnologiesEnum {
-  Next = 'Next',
-  React = 'React',
-  JavaScript = 'JavaScript',
-  MongoDB = 'MongoDB',
-  PostgreSQL = 'PostgreSQL',
-  Node = 'Node',
-  Nest = 'Nest',
-}
+import { HiOutlineServer } from 'react-icons/hi'
 
 export interface ProjectCardProps {
   name: string
-  aboutProject: string
-  features?: string
-  myRole?: string
-  mainTechnologies: MainTechnologiesEnum[]
-  technologies: string
-  type: ProjectType
-  urlImg?: string
-  urlGit: string
+  description: string
+  technologies: string[]
+  urlImg: string
+  urlGit?: string
   urlBack?: string
   urlSite?: string
 }
 
 export default function ProjectCard({
   name,
-  aboutProject,
-  features,
-  myRole,
-  urlBack,
-  mainTechnologies,
+  description,
   technologies,
-  type,
   urlImg,
   urlGit,
+  urlBack,
   urlSite,
 }: ProjectCardProps) {
   return (
-    <div className="bg-gray-800 shadow-md rounded-lg p-6 relative">
-      <div>
-        <div className="absolute top-2 left-2 bg-gray-700 text-white px-2 py-1 rounded">
-          {type}
-        </div>
-        <div className="absolute top-2 right-2">
-          <TechnologyIcons mainTechnologies={mainTechnologies} />
-        </div>
+    <div className="group rounded-3xl overflow-hidden border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+      {/* IMAGE */}
+      <div className="overflow-hidden">
+        <Image
+          src={urlImg}
+          alt={name}
+          width={800}
+          height={400}
+          className="h-52 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
       </div>
 
-      {urlImg && (
-        <div className="mt-8 mb-4">
-          <Image
-            src={urlImg}
-            alt={name}
-            width={500}
-            height={200}
-            className="rounded-lg w-full h-40"
-          />
+      <div className="p-6">
+        <h3 className="text-xl font-semibold">{name}</h3>
+
+        <p className="text-gray-400 text-sm mt-2">{description}</p>
+
+        {/* TECH */}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="text-xs px-3 py-1 rounded-full bg-white/10 border border-white/10"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
-      )}
-      <div className="flex justify-between items-center">
-        <h3 className="text-2xl font-bold mb-2 text-gray-100 mt-6">{name}</h3>
-        <div className="flex gap-2">
-          <a
-            href={urlSite}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <MdWeb size={28} color="white" />
-          </a>
-          <a
-            href={urlGit}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <FaGithub size={24} color="white" />
-          </a>
+
+        {/* ACTIONS */}
+        <div className="flex flex-wrap gap-3 mt-6 text-sm">
+          {urlSite && (
+            <a
+              href={urlSite}
+              target="_blank"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white text-black font-medium hover:opacity-80"
+            >
+              <MdWeb />
+              Live
+            </a>
+          )}
+
+          {urlGit && (
+            <a
+              href={urlGit}
+              target="_blank"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg border border-white/20 hover:bg-white/10"
+            >
+              <FaGithub />
+              Frontend
+            </a>
+          )}
+
           {urlBack && (
             <a
               href={urlBack}
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg border border-white/20 hover:bg-white/10"
             >
-              <FaGithub size={24} color="black" />
+              <HiOutlineServer />
+              Backend
             </a>
           )}
         </div>
       </div>
-      <p className="mb-2 text-gray-300 mt-4">{aboutProject}</p>
-      <p className="text-gray-300 mt-4">
-        <strong className="text-gray-100">Features:</strong> {features}
-      </p>
-      {myRole && (
-        <p className="text-gray-300 mt-4">
-          <strong className="text-gray-100">My Role:</strong> {myRole}
-        </p>
-      )}
-      <p className="text-gray-300 mt-4">
-        <strong className="text-gray-100">Technologies:</strong> {technologies}
-      </p>
     </div>
   )
 }
